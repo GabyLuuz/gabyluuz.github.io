@@ -1,6 +1,6 @@
 # Financial Analyst
 # 👋 Welcome!
-I'm **Xiaoting Lu**, a graduate student in Business Analytics at Purdue University with a strong foundation in accounting and data analysis. After three years of auditing experience in finance, manufacturing, and construction, I'm now focused on turning data into actionable insights as a future financial analyst.
+I'm **Xiaoting Lu**, an aspiring financial analyst passionate about transforming business data into strategic insights. I bring three years of auditing experience across the finance, manufacturing, and construction sectors, where I honed my analytical thinking and attention to detail. Now, I’m combining my financial background with technical training from Purdue’s Master’s in Business Analytics program to deliver data-driven solutions with real business impact.
 
 Thanks for visiting my site — feel free to explore my projects, résumé, and connect!
 
