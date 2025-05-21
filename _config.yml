@@ -1,12 +1,5 @@
-title: Xiaoting Luuz
+title: Xiaoting Lu
 logo: /assets/profile%20photo%20circle.png
 # description: open to work
 show_downloads: false
 theme: jekyll-theme-minimal
-navigation:
-  - title: LinkedIn
-    url: http://linkedin.com/in/xiaoting-lu-a5a2972b7
-  - title: Résumé
-    url: /assets/Xiaoting_Lu_Resume.pdf
-  - title: Email Me
-    url: mailto:lu1194@purdue.edu
