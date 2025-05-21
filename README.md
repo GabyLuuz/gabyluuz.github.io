@@ -4,13 +4,12 @@ I'm **Xiaoting Lu**, a graduate student in Business Analytics at Purdue Universi
 
 Thanks for visiting my site — feel free to explore my projects, résumé, and connect!
 
+
+### Connect with me:
 📄 [Download Résumé](assets/Xiaoting_Lu_Resume.pdf)  
 🔗 [LinkedIn](https://www.linkedin.com/in/xiaoting-lu-a5a2972b7)  
 📧 [lu1194@purdue.edu](mailto:lu1194@purdue.edu)
-### Connect with me:
-- [LinkedIn](https://linkedin.com/in/xiaoting-lu-a5a2972b7)
-- [Download Résumé](assets/Xiaoting_Lu_Resume.pdf)
-- 📧 [lu1194@purdue.edu](mailto:lu1194@purdue.edu)
+
 ### Education
 - 1
 - 2
