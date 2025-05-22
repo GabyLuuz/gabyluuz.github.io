@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?><_ROOT_ EMVERSION="15.2" ORIENTATION="HORIZONTAL">
+<Workspace>
+<NODES>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Boost" ID="Boost2" X="424" Y="218" DESCRIPTION="Gradient Boosting (2)" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Boost">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMODL.BOOST.SOURCE" ToolType="MODEL" Iterations="150" CategoricalBins="30" IntervalBins="100" TrainProportion="60" Seed="12345" Shrinkage="0.09" LeafFraction="0.001" SplitSize="." MinCatSize="5" MaxBranch="2" MaxDepth="3" NSurrs="0" Missing="USEINSEARCH" Huber="NO" ReUseVar="1" AssessMeasure="PROFIT" NodeSize="20000" Exhaustive="5000" VarSelection="Y" Performance="DISK" SubSeries="BEST" IterationNum="1" ObsImportance="N" NumSingleImp="5" CreateHStat="N" ForceRun="N" RunAction="Train" Component="Boost" Precision="0" Measure="PROFIT" NumPairImp="0" DataNeeded="Y">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes>
+<class>
+<DecData Table="EMWS3.Boost2_class_DD">
+<Data>
+<Obs CLASS="1" COUNT="126" DATAPRIOR="0.0210070023" TRAINPRIOR="0.0210070023" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CLASS="0" COUNT="5872" DATAPRIOR="0.9789929977" TRAINPRIOR="0.9789929977" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="class" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS3.Boost2_class_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="class" LABEL="" LEVEL="BINARY" EVENT="1" ORDER="" FORMAT="BEST12.0" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class1" LABEL="Predicted: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class1" LABEL="Residual: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class0" LABEL="Predicted: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class0" LABEL="Residual: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_class" LABEL="From: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_class" LABEL="Into: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</class>
+</EmTargetAttributes>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="EMSave" ID="EMSave" X="1034" Y="304" DESCRIPTION="Save Data" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="UTILITY" TOOLPREFIX="EMSave">
+<PROPERTIES Location="CATALOG" Catalog="Sashelp.Emutil.Savext.Source" Type="CSV" Replace="Y" AllObs="Y" OutObs="1000" AllRoles="Y" Train="Y" Validate="Y" Test="Y" Score="Y" Transaction="Y" ForceRun="N" RunAction="Train" Component="EMSave" Lib="" DirectorySelector="W:\MGMT571\Predicted data" Name="bank">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Attr1" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr10" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr11" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr12" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr13" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr13" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr14" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr15" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr15" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr16" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr17" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr18" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr19" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr2" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr20" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr21" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr22" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr23" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr24" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr24" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr25" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr25" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr26" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr26" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr27" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr28" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr28" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr29" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr3" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr30" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr31" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr32" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr33" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr34" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr34" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr35" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr35" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr36" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr37" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr37" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr38" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr38" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr39" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr39" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr4" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr40" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr41" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr42" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr43" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr44" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr45" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr46" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr46" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr47" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr48" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr48" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr49" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr5" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr5" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr50" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr51" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr52" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr53" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr54" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr55" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr56" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr57" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr58" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr59" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr6" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr6" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr60" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr61" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr62" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr63" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr64" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr64" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr7" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr8" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr9" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Q_class0" AttributeName="CREATOR" AttributeValue="Ensmbl"/>
+<DELTA Variable="Q_class1" AttributeName="CREATOR" AttributeValue="Ensmbl"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMMODL.ENSEMBLE.CLASS" COMPONENT="Ensemble" ID="Ensmbl" X="674" Y="147" DESCRIPTION="Ensemble" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Ensmbl">
+<PROPERTIES Predicted="AVERAGE" Posterior="AVERAGE" VotingPosterior="AVERAGE" ForceRun="N" RunAction="Train" Component="Ensemble" LastRunMessage="No target modeled by a preceding node.">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Attr1" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr10" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr11" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr12" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr13" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr13" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr14" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr15" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr15" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr16" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr17" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr18" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr19" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr2" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr20" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr21" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr22" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr23" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr24" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr24" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr25" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr25" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr26" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr26" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr27" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr28" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr28" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr29" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr3" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr30" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr31" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr32" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr33" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr34" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr34" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr35" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr35" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr36" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr37" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr37" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr38" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr38" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr39" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr39" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr4" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr40" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr41" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr42" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr43" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr44" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr45" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr46" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr46" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr47" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr48" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr48" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr49" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr5" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr5" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr50" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr51" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr52" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr53" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr54" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr55" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr56" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr57" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr58" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr59" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr6" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr6" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr60" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr61" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr62" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr63" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr64" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr64" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr7" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr8" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr9" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="class" AttributeName="MODEL" AttributeValue="Reg"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="FileImport" ID="FIMPORT" X="14" Y="124" DESCRIPTION="File Import" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="FIMPORT">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMSAMP.Fimport.SOURCE" ImportType="Local" GuessRows="500" Delimiter="," NameRow="Y" SkipRows="0" MaxRows="1000000" MaxCols="10000" FileType="csv" Role="TRAIN" ForceRun="N" Summarize="N" AdvancedAdvisor="N" RunAction="Train" Component="FileImport" IFileName="W:\MGMT571\Data\bankruptcy_Train.csv" AccessTable="NoTableName" UserID="NoUserID" Password="NoPassword">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="class" AttributeName="ROLE" AttributeValue="TARGET"/>
+<DELTA Variable="class" AttributeName="LEVEL" AttributeValue="BINARY"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<VARIABLESETDELTA Type="EXTERNAL" Extension="txt">
+<Data><![CDATA[
+if NAME=&quot;class&quot; then do;
+ROLE=&quot;TARGET&quot;;
+LEVEL=&quot;BINARY&quot;;
+ORDER=&quot;&quot;;
+DROP=&quot;N&quot;;
+end;
+]]>
+</Data>
+</VARIABLESETDELTA>
+<DELTACODE Type="EXTERNAL" Extension="txt">
+<Data><![CDATA[
+if NAME=&quot;class&quot; then do;
+ROLE=&quot;TARGET&quot;;
+LEVEL=&quot;BINARY&quot;;
+ORDER=&quot;&quot;;
+end;
+drop DROP;
+]]>
+</Data>
+</DELTACODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="FileImport" ID="FIMPORT2" X="695" Y="345" DESCRIPTION="File Import (2)" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="FIMPORT">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMSAMP.Fimport.SOURCE" ImportType="Local" GuessRows="500" Delimiter="," NameRow="Y" SkipRows="0" MaxRows="1000000" MaxCols="10000" FileType="csv" Role="SCORE" ForceRun="N" Summarize="N" AdvancedAdvisor="N" RunAction="Train" Component="FileImport" IFileName="W:\MGMT571\Data\bankruptcy_Test_X.csv" AccessTable="NoTableName" UserID="NoUserID" Password="NoPassword">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<VARIABLESETDELTA Type="EXTERNAL" Extension="txt">
+<Data/>
+</VARIABLESETDELTA>
+<DELTACODE Type="EXTERNAL" Extension="txt">
+<Data/>
+</DELTACODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="HPDMNeural" ID="HPNNA" X="414" Y="154" DESCRIPTION="HP Neural" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="HPNNA">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.HPDM.HPDMNEURAL.SOURCE" ToolType="MODEL" InputStd="RANGE" HIDDEN="3" HIDDENLAYERS="3" ARCHITECTURE="LAYER1" DIRECTCONN="N" TargetStd="RANGE" TargetActivation="IDENTITY" TargetError="NORMAL" OPTMETHOD="LBFGS" NUMTRIES="2" MAXITER="300" USEVALID="N" USEINVERSE="N" MISSASLVL="N" MAXLINKS="1000" ForceRun="N" RunAction="Train" Component="HPDMNeural" TableEditor="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Attr1" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr1" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr10" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr10" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr11" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr11" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr12" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr12" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr13" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr13" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr14" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr14" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr15" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr15" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr16" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr16" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr17" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr17" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr18" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr18" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr19" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr19" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr2" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr2" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr20" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr20" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr21" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr21" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr22" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr22" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr23" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr23" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr24" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr24" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr25" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr25" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr26" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr26" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr27" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr27" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr28" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr28" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr29" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr29" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr3" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr3" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr30" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr30" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr31" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr31" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr32" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr32" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr33" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr33" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr34" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr34" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr35" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr35" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr36" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr36" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr37" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr37" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr38" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr38" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr39" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr39" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr4" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr4" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr40" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr40" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr41" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr41" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr42" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr42" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr43" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr43" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr44" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr44" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr45" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr45" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr46" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr46" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr47" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr47" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr48" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr48" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr49" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr49" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr5" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr5" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr50" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr50" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr51" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr51" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr52" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr52" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr53" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr53" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr54" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr54" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr55" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr55" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr56" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr56" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr57" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr57" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr58" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr58" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr59" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr59" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr6" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr6" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr60" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr60" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr61" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr61" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr62" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr62" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr63" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr63" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr64" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr64" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr7" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr7" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr8" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr8" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr9" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr9" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+</EmVariableAttributes>
+<EmTargetAttributes>
+<class>
+<DecData Table="EMWS3.HPNNA_class_DD">
+<Data>
+<Obs CLASS="1" COUNT="126" DATAPRIOR="0.0210052513" TRAINPRIOR="0.0210070023" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CLASS="0" COUNT="5872" DATAPRIOR="0.9789947487" TRAINPRIOR="0.9789929977" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="class" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS3.HPNNA_class_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="class" LABEL="" LEVEL="BINARY" EVENT="1" ORDER="" FORMAT="BEST12.0" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class1" LABEL="Predicted: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class1" LABEL="Residual: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class0" LABEL="Predicted: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class0" LABEL="Residual: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_class" LABEL="From: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_class" LABEL="Into: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</class>
+</EmTargetAttributes>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<HIDDENOPTIONS Type="DATA">
+<Data/>
+<Metadata/>
+</HIDDENOPTIONS>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="HPDMReg" ID="HPReg" X="425" Y="290" DESCRIPTION="HP Regression" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="HPReg">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.HPDM.HPREG.SOURCE" MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="2" SuppressIntercept="N" MISSASLVL="N" Error="LOGISTIC" LinkFunction="LOGIT" SelectMethod="NONE" SelectCriterion="DEFAULT" StopCriterion="DEFAULT" SLEntry="0.05" SLStay="0.05" MaxEffects="0" MinEffects="0" Hierarchy="NONE" MaxSteps="0" SuppressOutput="N" ABSCONV="." ABSFCONV="." ABSGCONV="." FCONV="." GCONV="." TECH="NRRIDG" MAXITER="." MAXFUNC="." MAXTIME="." MINITER="." NORMALIZE="Y" EXCLUDEDVARIABLE="REJECT" ForceRun="N" RunAction="Train" Component="HPDMReg" NCPU="Actual" NNode="0" NThreads="Default" Host="Local" Timeout="120" LogDetails="N" Term="Y" Interactions="" SelectUseDefault="Y">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes>
+<class>
+<DecData Table="EMWS3.HPReg_class_DD">
+<Data>
+<Obs CLASS="1" COUNT="126" DATAPRIOR="0.0210052513" TRAINPRIOR="0.0210070023" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CLASS="0" COUNT="5872" DATAPRIOR="0.9789947487" TRAINPRIOR="0.9789929977" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="class" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS3.HPReg_class_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="class" LABEL="" LEVEL="BINARY" EVENT="1" ORDER="" FORMAT="BEST12.0" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class1" LABEL="Predicted: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class1" LABEL="Residual: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class0" LABEL="Predicted: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class0" LABEL="Residual: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_class" LABEL="From: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_class" LABEL="Into: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</class>
+</EmTargetAttributes>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMASSMT.ASSESS.CLASS" COMPONENT="ModelCompare" ID="MdlComp" X="814" Y="99" DESCRIPTION="Model Comparison" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="ASSESS" TOOLPREFIX="MdlComp">
+<PROPERTIES NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6" ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01" AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" intervalViyaCriteria="DEFAULT" classViyaCriteria="DEFAULT" SelectionTable="TRAIN" SelectionCriteria="DEFAULT" SelectionDepth="10" NumberofBins="20" RecomputeAssess="N" TargetName="class" ModelId="Ensmbl" ModelDescription="Ensemble" ModelCriteria="Valid: Misclassification Rate" ForceRun="N" RunAction="Train" Component="ModelCompare" StatisticUsed="_VMISC_" TargetLabel="">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMMODL.NEURAL.CLASS" COMPONENT="NeuralNetwork" ID="Neural" X="395" Y="81" DESCRIPTION="Neural Network" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Neural">
+<PROPERTIES UseEstimates="N" NetworkArchitecture="MLP" DirectConnection="N" Hidden="3" Prelim="Y" PreliminaryRuns="5" PrelimMaxiter="10" PrelimMaxTime="1 HOUR" Maxiter="50" Maxtime="4 HOURS" TrainingTechnique="DEFAULT" ConvDefaults="Y" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="0.00001" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTime="1" GConvValue="1E-6" GConvTime="1" ModelSelectionCriterion="PROFIT/LOSS" SuppressOutput="N" Residuals="Y" Standardizations="N" HiddenUnits="N" TrainCode="" PrelimOutest="" Outest="" Outfit="" InitialDs="" CodefileRes="" CodefileNoRes="" AddHidden="Y" HiddenCombFunction="DEFAULT" HiddenActivation="DEFAULT" HiddenBias="Y" TargetCombFunction="DEFAULT" TargetActivation="DEFAULT" TargetError="DEFAULT" TargetBias="Y" InitialSeed="12345" RandDist="NORMAL" RandScale="0.1" RandLoc="0" InputStandardization="STD" WeightDecay="0" Accelerate="1.2" Decelerate="0.5" Learn="0.1" MaxLearn="50" MinLearn="0.00001" Momentum="0" MaxMomentum="1.75" Tilt="0" ForceRun="N" RunAction="Train" Component="NeuralNetwork">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Attr1" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr1" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr10" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr10" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr11" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr11" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr12" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr12" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr13" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr13" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr14" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr14" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr15" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr15" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr16" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr16" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr17" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr17" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr18" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr18" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr19" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr19" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr2" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr2" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr20" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr20" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr21" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr21" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr22" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr22" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr23" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr23" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr24" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr24" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr25" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr25" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr26" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr26" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr27" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr27" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr28" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr28" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr29" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr29" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr3" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr3" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr30" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr30" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr31" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr31" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr32" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr32" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr33" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr33" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr34" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr34" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr35" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr35" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr36" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr36" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr37" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr37" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr38" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr38" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr39" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr39" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr4" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr4" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr40" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr40" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr41" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr41" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr42" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr42" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr43" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr43" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr44" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr44" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr45" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr45" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr46" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr46" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr47" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr47" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr48" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr48" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr49" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr49" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr5" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr5" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr50" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr50" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr51" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr51" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr52" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr52" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr53" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr53" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr54" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr54" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr55" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr55" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr56" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr56" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr57" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr57" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr58" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr58" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr59" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr59" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr6" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr6" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr60" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr60" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr61" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr61" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr62" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr62" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr63" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr63" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr64" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr64" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr7" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr7" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr8" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr8" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr9" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr9" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+</EmVariableAttributes>
+<EmTargetAttributes>
+<class>
+<DecData Table="EMWS3.Neural_class_DD">
+<Data>
+<Obs CLASS="1" COUNT="126" DATAPRIOR="0.0210052513" TRAINPRIOR="0.0210070023" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CLASS="0" COUNT="5872" DATAPRIOR="0.9789947487" TRAINPRIOR="0.9789929977" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="class" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS3.Neural_class_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="class" LABEL="" LEVEL="BINARY" EVENT="1" ORDER="" FORMAT="BEST12.0" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class1" LABEL="Predicted: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class1" LABEL="Residual: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class0" LABEL="Predicted: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class0" LABEL="Residual: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_class" LABEL="From: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_class" LABEL="Into: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</class>
+</EmTargetAttributes>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.EMDPART.CLASS" COMPONENT="Partition" ID="Part" X="52" Y="226" DESCRIPTION="Data Partition" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Part">
+<PROPERTIES Method="DEFAULT" TrainPct="60" ValidatePct="40" TestPct="0" RandomSeed="12345" OutputType="DATA" IntervalDistribution="Y" ClassDistribution="Y" ForceRun="N" RunAction="Train" Component="Partition">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg" X="396" Y="11" DESCRIPTION="Regression" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
+<PROPERTIES MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="2" Terms="N" Error="LOGISTIC" LinkFunction="LOGIT" SuppressIntercept="N" InputCoding="DEVIATION" MinResourceUse="N" ModelSelection="NONE" SelectionCriterion="DEFAULT" SelectionDefault="Y" Sequential="N" SlEntry="0.05" SlStay="0.05" Start="0" Stop="0" Force="0" Hierarchy="CLASS" Rule="NONE" MaxStep="." StepOutput="N" OptimizationTechnique="DEFAULT" ModelDefaults="Y" MaxIterations="." MaxFunctionCalls="." MaxCPUTime="1 HOUR" ConvDefaults="Y" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="0.00001" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTimes="1" GConvValue="1E-6" GConvTimes="1" ClParm="N" Covout="N" CovB="N" CorB="N" Simple="N" SuppressOutput="N" Details="N" PrintDesignMatrix="N" SASSPDS="N" Performance="N" ExcludedVariable="REJECT" ForceRun="N" RunAction="Train" Component="Regression" Interactions="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Attr1" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr1" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr10" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr10" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr11" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr11" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr12" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr12" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr13" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr13" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr14" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr14" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr15" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr15" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr16" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr16" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr17" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr17" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr18" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr18" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr19" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr19" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr2" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr2" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr20" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr20" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr21" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr21" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr22" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr22" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr23" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr23" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr24" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr24" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr25" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr25" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr26" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr26" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr27" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr27" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr28" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr28" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr29" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr29" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr3" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr3" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr30" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr30" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr31" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr31" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr32" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr32" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr33" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr33" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr34" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr34" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr35" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr35" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr36" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr36" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr37" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr37" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr38" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr38" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr39" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr39" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr4" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr4" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr40" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr40" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr41" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr41" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr42" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr42" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr43" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr43" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr44" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr44" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr45" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr45" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr46" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr46" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr47" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr47" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr48" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr48" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr49" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr49" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr5" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr5" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr50" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr50" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr51" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr51" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr52" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr52" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr53" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr53" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr54" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr54" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr55" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr55" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr56" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr56" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr57" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr57" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr58" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr58" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr59" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr59" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr6" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr6" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr60" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr60" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr61" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr61" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr62" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr62" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr63" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr63" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr64" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr64" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr7" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr7" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr8" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr8" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+<DELTA Variable="Attr9" AttributeName="ROLE" AttributeValue="REJECTED"/>
+<DELTA Variable="Attr9" AttributeName="COMMENT" AttributeValue="Replaced by Repl"/>
+</EmVariableAttributes>
+<EmTargetAttributes>
+<class>
+<DecData Table="EMWS3.Reg_class_DD">
+<Data>
+<Obs CLASS="1" COUNT="126" DATAPRIOR="0.0210052513" TRAINPRIOR="0.0210070023" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CLASS="0" COUNT="5872" DATAPRIOR="0.9789947487" TRAINPRIOR="0.9789929977" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="class" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS3.Reg_class_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="class" LABEL="" LEVEL="BINARY" EVENT="1" ORDER="" FORMAT="BEST12.0" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class1" LABEL="Predicted: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class1" LABEL="Residual: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class0" LABEL="Predicted: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class0" LABEL="Residual: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_class" LABEL="From: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_class" LABEL="Into: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</class>
+</EmTargetAttributes>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Replace" ID="Repl" X="159" Y="308" DESCRIPTION="Replacement" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Repl">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.REPLACE.SOURCE" HideVariable="N" UnknownLevel="NONE" ReplaceMethod="COMPUTED" CalcMethod="STDDEV" MADSCutoff="9.0" SpacingsCutoff="9.0" StddevCutoff="3.0" PercentsCutoff="0.5" CountReport="Y" ForceRun="N" RunAction="Train" Component="Replace" IntervalMethod="NONE" DataNeeded="Y">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<NEWVALUES Type="DATA">
+<Data>
+<Obs NAME="class" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
+</Data>
+<Metadata>
+<Variable NAME="Name" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Formatted Value" LENGTH="12" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="REPLACE_VALUE" LABEL="Replacement Value" LENGTH="200" FORMAT="" TYPE="C"/>
+</Metadata>
+</NEWVALUES>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMUTIL.EMSCORE.CLASS" COMPONENT="Score" ID="Score" X="832" Y="306" DESCRIPTION="Score" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="ASSESS" TOOLPREFIX="Score">
+<PROPERTIES OutputType="DATA" FixedOutputNames="Y" HideVariables="N" HideInput="Y" HideTarget="Y" HideRejected="Y" HideAssess="Y" HidePredict="Y" HideFreq="Y" HideClassification="Y" HideResidual="Y" HideOther="Y" ScoreValidate="N" ScoreTest="N" CScore="N" JScore="N" PackageName="DEFAULT" UserPackageName="" PreferenceName="" OptimizedCode="Y" GraphReports="Y" ForceRun="N" RunAction="Train" Component="Score">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DecisionTree" ID="Tree" X="447" Y="364" DESCRIPTION="Decision Tree" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Tree">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMODL.TREE.SOURCE" ToolType="MODEL" TrainMode="BATCH" ImportModel="N" Freeze="N" UseMultipleTarget="N" Precision="4" IntervalCriterion="PROBF" NominalCriterion="PROBCHISQ" OrdinalCriterion="ENTROPY" SigLevel="0.2" Splitsize="." LeafSize="5" MinCatSize="5" Maxbranch="2" Maxdepth="6" Nrules="5" Nsurrs="0" MissingValue="USEINSEARCH" UseVarOnce="N" SplitPrecision="4" Subtree="ASSESSMENT" NSubtree="1" AssessMeasure="PROFIT/LOSS" AssessPercentage="0.25" NodeSample="20000" Exhaustive="5000" Kass="Y" KassApply="BEFORE" Depth="Y" Inputs="N" NumInputs="1" VarSelection="Y" Leafid="Y" NodeRole="SEGMENT" Performance="DISK" CV="N" CVNIter="10" CVRepeat="1" CVSeed="12345" ObsImportance="N" NumSingleImp="5" UseDecision="N" UsePriors="N" ClassColorBy="PERCENTCORRECT" IntColorBy="AVG" ShowNodeId="Y" ShowValid="Y" Pred="N" Target="ALL" Count="Y" ProfitLoss="NONE" PercentCorrect="N" AVG="Y" RASE="N" CreateSample="DEFAULT" SampleMethod="RANDOM" SampleSize="10000" SampleSeed="12345" ForceRun="N" RunAction="Train" Component="DecisionTree" Criterion="DEFAULT" Dummy="N" Predict="Y" ImportedTreeData="">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes>
+<class>
+<DecData Table="EMWS3.Tree_class_DD">
+<Data>
+<Obs CLASS="1" COUNT="126" DATAPRIOR="0.0210052513" TRAINPRIOR="0.0210070023" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CLASS="0" COUNT="5872" DATAPRIOR="0.9789947487" TRAINPRIOR="0.9789929977" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="class" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS3.Tree_class_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="class" LABEL="" LEVEL="BINARY" EVENT="1" ORDER="" FORMAT="BEST12.0" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class1" LABEL="Predicted: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class1" LABEL="Residual: class=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_class0" LABEL="Predicted: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_class0" LABEL="Residual: class=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_class" LABEL="From: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_class" LABEL="Into: class" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</class>
+</EmTargetAttributes>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+</NODES>
+<CONNECTIONS>
+<CONNECTION FROM="FIMPORT" TO="Part"/>
+<CONNECTION FROM="Part" TO="Repl"/>
+<CONNECTION FROM="Repl" TO="Boost2"/>
+<CONNECTION FROM="Repl" TO="Tree"/>
+<CONNECTION FROM="Repl" TO="HPNNA"/>
+<CONNECTION FROM="Repl" TO="Neural"/>
+<CONNECTION FROM="Repl" TO="HPReg"/>
+<CONNECTION FROM="Repl" TO="Reg"/>
+<CONNECTION FROM="Neural" TO="Ensmbl"/>
+<CONNECTION FROM="Ensmbl" TO="MdlComp"/>
+<CONNECTION FROM="HPNNA" TO="Ensmbl"/>
+<CONNECTION FROM="Reg" TO="Ensmbl"/>
+<CONNECTION FROM="MdlComp" TO="Score"/>
+<CONNECTION FROM="FIMPORT2" TO="Score"/>
+<CONNECTION FROM="Score" TO="EMSave"/>
+<CONNECTION FROM="Boost2" TO="Ensmbl"/>
+</CONNECTIONS>
+<NOTES>
+<DATA><![CDATA[
+
+]]>
+</DATA>
+</NOTES>
+</Workspace>
+</_ROOT_>
