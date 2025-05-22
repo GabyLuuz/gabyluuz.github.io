@@ -6,20 +6,5 @@ Thanks for visiting my site — feel free to explore my projects, résumé, and 
 
 
 ### Connect with me:
-📄 [Download Résumé](assets/Xiaoting_Lu_Resume.pdf)  
 🔗 [LinkedIn](https://www.linkedin.com/in/xiaoting-lu-a5a2972b7)  
 📧 [lu1194@purdue.edu](mailto:lu1194@purdue.edu)
-
-### Education
-- 1
-- 2
-- 3
-
-### Work Experiences
-Auditor
-- big
-- project1
-
-### Projects
-
-
