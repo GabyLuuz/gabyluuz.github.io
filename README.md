@@ -8,3 +8,4 @@ Thanks for visiting my site — feel free to explore my projects, résumé, and 
 ### Connect with me:
 🔗 [LinkedIn](https://www.linkedin.com/in/xiaoting-lu-a5a2972b7)  
 📧 [lu1194@purdue.edu](mailto:lu1194@purdue.edu)
+🌏 [Personal Website](https://xtlu1995.wixsite.com/xiaoting-lu) 
